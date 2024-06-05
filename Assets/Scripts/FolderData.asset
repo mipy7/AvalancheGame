@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70aabb293591d5f42bb0c38e42ba1a2c, type: 3}
   m_Name: FolderData
   m_EditorClassIdentifier: 
-  gameType: 2
+  gameType: 0
   figure: 0
   turn: 0

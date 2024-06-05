@@ -24,8 +24,13 @@ public class FolderScript : ScriptableObject
 		set { instance.turn = value; }
 	}
 
-	public static FolderScript instance = null;
-	
+	public static FolderScript instance;
+
+	private void OnEnable()
+	{
+		instance = this;
+	}
+
 	public static void Reset() 
 	{
 		instance.gameType = 0;

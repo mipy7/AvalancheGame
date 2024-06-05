@@ -24,7 +24,7 @@ public class ScaleToFitScreen : MonoBehaviour
 #endif
     }
 
-    private void ScaleToFit()
+	private void ScaleToFit()
     {
 		float worldScreenHeight = Camera.main.orthographicSize * 2;
 
@@ -32,10 +32,24 @@ public class ScaleToFitScreen : MonoBehaviour
 
         float newHeight = worldScreenWidth / width * height;
 
-		transform.localScale = new Vector3(
+        float newWidth = worldScreenHeight / height * width;
+
+        if(newWidth < newHeight)
+        {
+			transform.localScale = new Vector3(
+			newWidth,
+			worldScreenHeight,
+			1
+			);
+		}
+		else
+		{
+			transform.localScale = new Vector3(
 			worldScreenWidth,
 			newHeight,
-            1
-            );
+			1
+			);
+		}
+
     }
 }
