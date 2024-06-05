@@ -21,17 +21,21 @@ public class GameOver : MonoBehaviour
         if(FolderScript.GameType == 0)
         {
             if (FolderScript.Turn == 1)
-                GameOverText.text = "Победил первый игрок";
+                GameOverText.text = "First Player Win";
+                //GameOverText.text = "Победил первый игрок";
             else
-                GameOverText.text = "Победил второй игрок";
+                GameOverText.text = "Second Player Win";
+                //GameOverText.text = "Победил второй игрок";
         }
 
         if (FolderScript.GameType == 1 || FolderScript.GameType == 2)
         {
             if (FolderScript.Turn != (FolderScript.Figure - 1))
-                GameOverText.text = "Вы победили";
+                GameOverText.text = "You Win";
+                //GameOverText.text = "Вы победили";
             else
-                GameOverText.text = "Вы проиграли";
+                GameOverText.text = "You Lose";
+                //GameOverText.text = "Вы проиграли";
         }
     }
 
